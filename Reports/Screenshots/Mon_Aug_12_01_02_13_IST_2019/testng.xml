@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Map Sync WebUI Test Automation">
+
+<test name="MapsynqRegistration Test">
+    <classes>
+        <class name="com.mapsync.testsuite.MapsynqRegistration" ></class>
+    </classes>
+</test>
+
+<test name="OpenCamera Test">
+    <classes>
+        <class name="com.mapsync.testsuite.OpenCamera" ></class>
+    </classes>
+</test>
+
+<test name="OpenGalactico Test">
+    <classes>
+        <class name="com.mapsync.testsuite.OpenGalactico" ></class>
+    </classes>
+</test>
+
+</suite>
