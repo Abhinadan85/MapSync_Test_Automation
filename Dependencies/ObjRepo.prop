@@ -1,0 +1,106 @@
+#Locator References in order of Execution Speed
+#id			 #
+#name		 @
+#className	 .
+#cssSelector
+#xpath		 /
+
+#Common Fields
+LOGO=//*[@id="div_header"]/a
+REGISTER=//*[@id="div_header"]/div[2]/div[4]/a[2]
+FIRSTNAME=#profile_first_name
+LASTNAME=//*[@id="profile_last_name"]
+COUNTRY=//*[@id="profile_country"]
+SEX=//*[@id="new_profile"]/table/tbody/tr[6]/td[2]/div[1]/label
+DOB=//*[@id="profile_dob"]
+EMAILID=//*[@id="profile_email"]
+PASSWORD=//*[@id="password"]
+CONFPASS=//*[@id="identity[password_confirmation]"]
+GALACTICO=//*[@id="div_header"]/div[2]/div[2]/a[2]
+TNC=//*[@id="chk_agree"]
+SUBMIT=//*[@id="new_profile"]/table/tbody/tr[15]/td[2]/input
+CAMERA=//*[@id="news_menu"]/div[1]/label[2]/span/h2
+ROAD=//*[@id="c1711"]/a
+LOGON=#loginButton
+ACCEPT=//span[text()="Accept"]
+DESIGNS=//span[text()="Designs"]
+LOGOFF=#logoffLink
+MILLENNIUM=//span[text()="millennium"]
+SERVER_ACTION=//span[text()="Millennium Server Actions"]
+VALIDATION_TOOL=//a[text()="Validation Tool"]
+INITIATE_DOWNLOAD=//a[text()="Initiate Download"]
+#Page specific Fields
+
+#Interface Page
+#VALIDATION_TOOL=//a[text()="Validation Tool"]
+#VALIDATION_TOOL=//*[@id="serverActionsMain"]/div[2]/div/div[2]/div/div/a
+
+#Validation Tool Page
+ENCRYPTED_INPUT=//input[@type="password"]
+ENCRYPTED_MODAL=//div[@tabindex="0"]
+BACK=//*[@class="si-message-validation-application"]/div/div/div[1]/div/div[1]/div/header/div[1]/div/button/span/span
+HEADER=//*[@id="root"]/div/div[1]/div/div[1]/div/div[1]/div/header/div[2]/div/h1
+
+STARTDATECALENDER=//*[@id="start-date-time-picker"]/div[1]/div/div/div/div/button
+#STARTDATE=//*[@id="root"]/div/div[1]/div/div[2]/div/div/div/div[2]/div/div[2]/div/fieldset/div/div/div[1]/div[1]/div[2]/div[1]/div/div/div/div/input[2]
+STARTDATE=//*[@id="start-date-time-picker"]/div[1]/div/div/div/div/input[2]
+#STARTDATEINVALIDMESSAGE=//*[@id="root"]/div/div[1]/div/div[2]/div/div/div/div[2]/div/div[2]/div/fieldset/div/div/div[1]/div[1]/div[3]
+STARTDATEINVALIDMESSAGE=//*[@id="start-date-field"]/div[3]
+
+
+#STARTTIME=//*[@id="root"]/div/div[1]/div/div[2]/div/div/div/div[2]/div/div[2]/div/fieldset/div/div/div[1]/div[1]/div[2]/div[2]/div/input[2]
+STARTTIME=//*[@id="start-date-time-picker"]/div[2]/div/input[2]
+
+ENDTIME=//*[@id="root"]/div/div[1]/div/div[2]/div/div/div/div[2]/div/div[2]/div/fieldset/div/div/div[1]/div[2]/div/div[2]/div[2]/div/input[2]
+
+ENDDATECALENDER=//*[@id="root"]/div/div[1]/div/div[2]/div/div/div/div[2]/div/div[2]/div/fieldset/div/div/div[1]/div[2]/div/div[2]/div[1]/div/div/div/div/button
+#ENDDATE=//*[@id="root"]/div/div[1]/div/div[2]/div/div/div/div[2]/div/div[2]/div/fieldset/div/div/div[1]/div[2]/div/div[2]/div[1]/div/div/div/div/input[2]
+ENDDATE=//*[@id="end-date-time-picker"]/div[1]/div/div/div/div/input[2]
+#ENDDATEINVAIDMESSAGE=//*[@id="root"]/div/div[1]/div/div[2]/div/div/div/div[2]/div/div[2]/div/fieldset/div/div/div[1]/div[2]/div/div[3]
+ENDDATEINVAIDMESSAGE=//*[@id="end-date-field"]/div[3]
+
+EMAIL=//*[@type='email']
+EMAILINVALIDMESSAGE=//*[@id="root"]/div/div[1]/div/div[2]/div/div/div[2]/div/div[2]/div/fieldset/div/div/div[5]/div/div[4]/div[2]
+
+CONTRIBUTERSYSTEM=//*[@id="root"]/div/div[1]/div/div[2]/div/div/div/div[2]/div/div[2]/div/fieldset/div/div/div[2]/div/div[3]/div/div[1]/ul/li/input
+CONTRIBUTERSYSTEMINVALIDMESSAGE=//*[@id="root"]/div/div[1]/div/div[2]/div/div/div/div[2]/div/div[2]/div/fieldset/div/div/div[2]/div/div[6]
+#CONTRIBUTERSYSTEMNOMATCHES=//*[@id="terra-select-dropdown"]/ul/div
+
+CONTRIBUTERSYSTEMRADIO=#contributor-systems-radio
+INTERFACERADIO=#interfaces-radio
+
+INTERFACE=//*[@id="root"]/div/div[1]/div/div[2]/div/div/div/div[2]/div/div[2]/div/fieldset/div/div/div[2]/div/div[5]/div/div[1]/ul/li/input
+INTERFACEINVALIDMESSAGE=//*[@id="root"]/div/div[1]/div/div[2]/div/div/div/div[2]/div/div[2]/div/fieldset/div/div/div[2]/div/div[6]
+
+SELECTED=#error-status-selected-radio
+ERRORSTATUSOPTION=//span[@class='Checkbox-module__label-text___fY5lt']
+
+BROWSE=//input[@type='file']
+JOBRUNTIME=//input[@class='Input-module__form-input___2z_wq RunOptionsView__input-spacing___RB-eD']
+INITIATEDOWNLOAD=//a[text()='Initiate Download']
+DOWNLOAD=//span[text()='Download']
+INFO=#info-icon
+INFODIALOG=//div[@class='CardBody-module__vertical-padding___GeUaz CardBody-module__horizontal-padding___2RJ4F']
+
+ENCRYPTIONKEY=//html/body/div[4]/div/div[2]/div/div/div[2]/div[2]/div/div/div[3]/div/input
+CONFIRMENCRYPTIONKEY=//html/body/div[4]/div/div[2]/div/div/div[2]/div[2]/div/div/div[3]/div/div[2]/input
+OK=//span[text()='OK']
+CANCEL=//span[text()='Cancel']
+ENCRYPTFILEERROR=(//p[@class='Alert-module__section___DDsAN'])[2]
+SCHEDULERUN=//span[text()='Run will start on']
+SCHEDULERUNHEADER=//h1[@class='ActionHeaderContainer-module__title___1t3UH']
+RUNNOW=//button[@alt='Run now']
+ESILOGVALIDATIONTEXT=//h1[@class="Header__title___3rbMt"]
+SUBMITPIIDIALOG=//span[text()='Submit']
+DYNAMICTXT=//div[@id="action-button-region"]/div/a
+NEW_DYNAMICTXT=//div[@id="action-button-region"]/div/span
+
+PIIREMINDERTEXT=//p[@class="Alert-module__section___DDsAN"]
+GLOBALACTIONAREA=//header[@class="Header__flex-header___31sRw"]
+JOBREPORTAREA=//div[@class="ContentContainer-module__main___Y84CU"]
+VERIFYSYSTEMRULESMESSAGE=//html/body/div[4]/div/div[2]/div/div/div[2]/div[2]
+VERIFYEXCESSIVERULESMESSAGE=//html/body/div[4]/div/div[2]/div/div/div[2]/div[2]
+DATESCHEDULERUN=//*[@id="schedule-run-date-time-picker"]/div[1]/div/div/div/div/button
+STARTTIMESCHEDULERUN=//*[@id="schedule-run-date-time-picker"]/div[2]/div/input[2]
+SCHEDULE=//span[text()='Schedule']
+MODALCLOSE=#trigger-dialog-modal

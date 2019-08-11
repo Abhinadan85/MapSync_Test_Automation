@@ -1,0 +1,166 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Si Message Validation Tool WebUI Test Automation">
+
+<test name="OPENLINK-1710 VAL TOOL - Start Date">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_1710_StartDate" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-1660 VAL TOOL - End Date">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_1660_EndDate" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-1660 VAL TOOL - End Date - Update End Date">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_1660_EndDate_UpdateEndDate" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-1660 VAL TOOL - End Date - Update End Time">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_1660_EndDate_UpdateEndTime" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-1666 VAL TOOL - Contributor System Field">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_1666_ContributorSystemField" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-2035 VAL TOOL - Contributor System Field Validation">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_2035_ContributorSystemFieldValidation" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-1672 VAL TOOL - Interface Name Field">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_1672_InterfaceNameField" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-1686 VAL TOOL - Terminate Job Field">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_1686_TerminateJobField" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-1678 VAL TOOL - ESI Error Status Fields">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_1678_ESIErrorStatusFields" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-1292 Schedule Run Modal Dialog">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_1292_ScheduleRunModalDialog" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-2119 VAL TOOL - Encryption Key Complexity Rules">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_2119_EncryptionKeyComplexityRules" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-2125 VAL TOOL - Encryption Key Info Dialog">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_2125_EncryptionKeyInfoDialog" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-VAL TOOL - Create Job Entry On Run Now">
+    <classes>
+        <class name="com.cerner.smv.testsuite.CreateJobEntryOnRunNow" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-VAL TOOL - Create New Job Using Run Will Start On Button">
+    <classes>
+        <class name="com.cerner.smv.testsuite.CreateNewJobUsingRunWillStartOnButton" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-1651 VAL TOOL - Validation ToolHeader and Title">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_1651_ValidationToolHeader_Title" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-1685 VAL TOOL - Rule Set File">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_1685_RuleSetFile" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-1726 VAL TOOL - Available Reports">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_1726_AvailableReports" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-1732 VAL TOOL - Job Row Details">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_1732_JobRowDetails" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-1738 VAL TOOL - Delete Completed Only Jobs">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_1738_DeleteCompletedOnlyJobs" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-1744 VAL TOOL - Download Report Action">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_1744_DownloadReportAction" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-1768 VAL TOOL - PII Warning">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_1768_PIIWarning" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-1999 VAL TOOL - Report View Columns">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_1999_ReportViewColumns" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-2041 VAL TOOL - Interface Name Field Validation">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_2041_InterfaceNameFieldValidation" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-2041 VAL TOOL - Interface Name Field Validation - Neither Contributor System Field or Interface Name Field is Selected">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_2041_InterfaceNameFieldValidation_NeitherChosen" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-2134 VAL TOOL - Verify Rules File On Submit">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_2134_VerifyRulesFileOnSubmit" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-2364 VAL TOOL - Job List Sort Order">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_2364_JobListSortOrder" ></class>
+    </classes>
+</test>
+
+<test name="OPENLINK-2408 VAL TOOL - Encryption Key Character Masking">
+    <classes>
+        <class name="com.cerner.smv.testsuite.OPENLINK_2408_EncryptionKeyCharacterMasking" ></class>
+    </classes>
+</test>
+
+</suite>
