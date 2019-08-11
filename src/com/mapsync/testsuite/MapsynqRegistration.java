@@ -2,9 +2,6 @@ package com.mapsync.testsuite;
 
 import org.testng.annotations.Test;
 
-import com.mapsync.pages.Camera;
-import com.mapsync.pages.Galactico;
-import com.mapsync.pages.Landing;
 import com.mapsync.pages.Logon;
 import com.mapsync.pages.Registration;
 

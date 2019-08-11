@@ -1,8 +1,5 @@
 package com.mapsync.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
 import com.mapsync.fl.Architypes;
 import com.mapsync.fl.Initialize;
 import com.mapsync.fl.PropFileRead;

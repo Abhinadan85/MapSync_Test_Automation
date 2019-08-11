@@ -1,44 +1,15 @@
 package com.mapsync.pages;
 
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-import java.awt.Toolkit;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.awt.datatransfer.StringSelection;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 
-import org.apache.commons.lang3.time.DateUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
+import java.util.ArrayList;
+
+
 
 import com.mapsync.fl.Architypes;
 import com.mapsync.fl.Initialize;
 import com.mapsync.fl.Reporter;
 
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-import java.awt.Toolkit;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.awt.datatransfer.StringSelection;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 
-import org.apache.commons.lang3.time.DateUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 
 public class Galactico {
