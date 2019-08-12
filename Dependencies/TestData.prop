@@ -1,37 +1,3 @@
-#USERNAME=consultanttestuser1
-#PASSWORD=consultanttestuser1
-#DESIGN_NAME=deveng.ip.devcerner.net
-USERNAME=FSIAUTOTESTUSER
-PASSWORD=1FSIA1B2C3
-DESIGN_NAME=64dev.ip.devcerner.net
-#FIRSTNAME=stephen
-BEGINDATE=08/01/2009
-FORMTYPE=Radiology/Imaging Order
-#FORMSTATUS=In Process
-#ISISYSTEMADMINISTRATOR=ISI System Administrator
-#TESTPRACTICE1PRACTICEADMINISTRATOR=Test Practice1 Practice Administrator
-#SYSTEMADMIN=System Admin
-#ROLES=Roles
-#PRACTICEMGT=Practice Mgt
-#PHYSICIANNOTIFICATIONADMIN=Physician Notification Admin
-#SYSTEMROLES=Hospital User
-#GROUPNAME=Mercy General Hospital
-#ORDERSINBOX=Orders Inbox
 
-##Validation Tool
 LASTNAME=Maity
 COUNTRY=India
-RULESETVALIDCSV=\\Dependencies\\TestFiles\\rule.csv
-RULESETEMPTYCSV=\\Dependencies\\TestFiles\\ruleEmpty.csv
-RULESETPDF=\\Dependencies\\TestFiles\\rule.pdf
-NEWCSVRULESET=\\Dependencies\\TestFiles\\ADT_Rule_Set_V2.csv
-ACTION_LINK_TEXT=Download
-RULESETEXCESSIVEERRORCSV=\\Dependencies\\TestFiles\\ruleset_with_excessive_message.csv
-RULESETSYETEMERROR=\\Dependencies\\TestFiles\\ruleset_with_system_error.csv
-NEWCSVRULESET=\\Dependencies\\TestFiles\\ADT_Rule_Set_V2.csv
-INVALID_INTERFACE=test@abc
-VALID_INTERFACE_1=FSI_VA2
-VALID_INTERFACE_2=Export_CCD
-INVALID_CONTRIBUTER=message
-VALID_CONTRIBUTER_1=FSITEST
-VALID_CONTRIBUTER_2=SURESCRIPT

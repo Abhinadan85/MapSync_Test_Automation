@@ -1,3 +1,0 @@
-﻿Follow-up,Message Type,HL7 Version,Segment Alias,Field Num,Component Num,SubComponent Num,Check Exists,Check Not Exists,Check Code Set Alias,Check Character Length,Check Is Numeric,Special Existence Check
-,ORU,,PID,2,,,1,,,1,,
-,ORU,,PID,4,,,1,,,1,,

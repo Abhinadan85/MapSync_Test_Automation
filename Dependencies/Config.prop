@@ -2,4 +2,4 @@ URL=http://www.mapsynq.com
 
 DEVICE=Laptop
 LOGTYPE=SUMMARY
-BROWSER=HTML
+BROWSER=CHROME

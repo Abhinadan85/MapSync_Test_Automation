@@ -85,7 +85,7 @@ public class Initialize {
 			    		  cap = DesiredCapabilities.internetExplorer();
 				    	  driver = new InternetExplorerDriver(cap);
 		    			  driver.manage().window().maximize();
-			    	  }else{
+			    	  }else if(PropFileRead.GetKeyValue("BROWSER","Config.prop").equalsIgnoreCase("HTML")){
 			    	  
 			    		  driver = new HtmlUnitDriver();
 			    	  }
@@ -94,7 +94,7 @@ public class Initialize {
 
 	
 	    }		
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		System.out.println(URL);
 		driver.get(URL);
 	}
