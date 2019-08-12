@@ -1,11 +1,9 @@
 package com.mapsync.testsuite;
 
 import org.testng.annotations.Test;
-
-
 import com.mapsync.pages.Galactico;
-
 import com.mapsync.pages.Logon;
+
 
 
 public class OpenGalactico {
@@ -17,25 +15,14 @@ public class OpenGalactico {
 	 
 		 Logon L = new Logon(TestName);
 		 L.Login();
-	
+		 
+		 
 		 
 		 Galactico GL = new Galactico(TestName);
 		 GL.openGalactico();
 		 
 		 L.Close();
-		 
+
 	}
-/*	@Test
-	public void OpenCamera_Test() {
-
-		 String TestName = this.getClass().getSimpleName();
-	 
-		 Logon L = new Logon(TestName);
-		 L.Login();
-		 
-				 
-		 Camera CAM = new Camera(TestName);
-		 CAM.openCamera();
-	} */
-
+	
 }

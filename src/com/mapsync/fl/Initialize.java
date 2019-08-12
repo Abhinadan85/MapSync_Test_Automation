@@ -27,6 +27,7 @@ import io.appium.java_client.android.AndroidElement;
 
 public class Initialize {
 	public static WebDriver driver;
+//	public WebDriver driver;
 	public static int TestRun = 1;
 	String TASKLIST = "tasklist";
 	String KILL = "taskkill /F /IM ";
@@ -65,7 +66,8 @@ public class Initialize {
 				
 		//Capabilities are options that you can use to customize and configure a browser session
         //Capabilities are used here to disable save password prompt in chrome
-        ChromeOptions options = new ChromeOptions();	
+        ChromeOptions options = new ChromeOptions();
+
   	    Map<String, Object> prefs = new HashMap<String, Object>();
   	    prefs.put("credentials_enable_service", false);
   	    //prefs.put("profile.password_manager_enabled", false);
@@ -89,20 +91,7 @@ public class Initialize {
 			    	  }
 	    			  break;
 	    			   
-/*	    case "NEXUS": cap.setCapability("browserName", "Chrome");
-			          cap.setCapability("deviceName","Nexus 6P");
-			          cap.setCapability("platformName","Android");
-			          cap.setCapability("unicodeKeyboard", true);
-			          cap.setCapability("resetKeyboard", true);			          
-			          try {			        	  
-			        	//Unlock Screen 
-			        	Runtime.getRuntime().exec("adb shell am start -n io.appium.unlock/.Unlock");			        	
-						driver= new AppiumDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
-						((AppiumDriver) driver).rotate(ScreenOrientation.PORTRAIT);
-			          } catch (Exception e) {
-						e.printStackTrace();
-			          }			          
-					  break;*/
+
 	
 	    }		
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
@@ -113,7 +102,7 @@ public class Initialize {
 	
 	public void TerminateExecution(){
 		
-		driver.quit();
+		driver.close();
 		
 		//Terminate desired Processes
 		Root.TerminateProcess();		

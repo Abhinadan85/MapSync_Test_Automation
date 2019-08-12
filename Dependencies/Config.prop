@@ -1,11 +1,5 @@
 URL=http://www.mapsynq.com
 
 DEVICE=Laptop
-#DEVICE=Laptop
-#DEVICE=Nexus
-#DEVICE=Surface
-#DEVICE=Apple iPhone 6
-
-#LOGTYPE=DETAILED
 LOGTYPE=SUMMARY
-BROWSER=CHROME
+BROWSER=HTML

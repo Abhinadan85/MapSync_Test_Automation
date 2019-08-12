@@ -59,28 +59,7 @@ public class Logon {
 	 */
 	public Boolean Close(){
 		Boolean b=false;
-		//WebDriver d = Initialize.driver;
 		
-		/*//Click on Back Button to navigate back to OPL Landing Page
-		wait(4000);
-		A.ElementExists("BACK");
-		A.ClickElement("BACK");
-		
-		//Accept the Pop-up Modal
-		wait(5000);
-		A.ClickElement("ACCEPT");
-		
-		//Click on Log Off Link in OPENLink
-		A.ClickElement("LOGOFF");
-				
-		//Verify Log Off and Shutdown Application
-		if(A.ElementExists("LOGIN")){
-			 reporter.Pass("Log Off from Application is successful", true);
-			 Init.TerminateExecution();
-			 reporter.endTest(TestName);
-			 b=true;
-		 }
-		 else reporter.FailAndExit(TestName,"Failed to Log Off from Application", true);  */
 		
 		 reporter.Pass("Closing of Application is successful", true);
 		 Init.TerminateExecution();
