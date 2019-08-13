@@ -2,6 +2,7 @@ package com.mapsync.testsuite;
 
 import org.testng.annotations.Test;
 
+import com.mapsync.fl.Initialize;
 import com.mapsync.pages.Camera;
 import com.mapsync.pages.Galactico;
 
@@ -15,14 +16,15 @@ public class ParallelExecution {
 	public void OpenGalactico_Test() {
 
 		 String TestName = this.getClass().getSimpleName();
+		 Initialize Init = new Initialize();
 	 
-		 Logon L = new Logon(TestName);
+		 Logon L = new Logon(TestName,Init);
 		 L.Login();
 		 
 		 System.out.println("1st test login");
 		 
 		 
-		 Galactico GL = new Galactico(TestName);
+		 Galactico GL = new Galactico(TestName,Init);
 		 GL.openGalactico();
 		 
 		 L.Close();
@@ -32,12 +34,13 @@ public class ParallelExecution {
 	public void OpenCamera_Test() {
 
 		 String TestName = this.getClass().getSimpleName();
+		 Initialize Init = new Initialize();
 	 
-		 Logon L = new Logon(TestName);
+		 Logon L = new Logon(TestName,Init);
 		 L.Login();
 		 
 		 System.out.println("2nd test login");		 
-		 Camera CAM = new Camera(TestName);
+		 Camera CAM = new Camera(TestName,Init);
 		 CAM.openCamera();
 		 
 		 L.Close();
@@ -48,11 +51,12 @@ public class ParallelExecution {
 	public void MapsynqRegistration_Test() {
 
 		 String TestName = this.getClass().getSimpleName();
+		 Initialize Init = new Initialize();
 	 
-		 Logon L = new Logon(TestName);
+		 Logon L = new Logon(TestName,Init);
 		 L.Login();
 		 System.out.println("3rd test login");
-		 Registration RG = new Registration(TestName);
+		 Registration RG = new Registration(TestName,Init);
 		 RG.registerUser();
 		 
 		 L.Close();

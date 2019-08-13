@@ -16,10 +16,12 @@ public class Architypes {
 	
 	private Reporter reporter;
 	String TestName;
+	Initialize init;
 	
-	public Architypes(String tName){		
-		reporter = Reporter.getInstance();
+	public Architypes(String tName , Initialize initInstance){		
+		reporter = Reporter.getInstance(initInstance);
 		TestName=tName;
+		init = initInstance;
 	}
 	
 	//Verifies if Element specified by Element Name on Object Repository Exists
@@ -37,7 +39,7 @@ public class Architypes {
 	
 	//Verifies if Element specified by XPath Exists
 	public boolean ElementExistsByXpath(String XP){
-		if(Initialize.driver.findElements(By.xpath(XP)).size()>0){
+		if(init.driver.findElements(By.xpath(XP)).size()>0){
 			System.out.println("Web Element specified by Xpath: " + XP + " Exists");
 			reporter.Pass("Web Element specified by Xpath: " + XP + " Exists", false);
 			return true;
@@ -65,7 +67,7 @@ public class Architypes {
 	//Move Mouse over an Element specified by Element Name on Object Repository
 	public boolean MouseOverElement(String Element){
 		Boolean b = false;
-		Actions action = new Actions(Initialize.driver);		
+		Actions action = new Actions(init.driver);		
 		try{action.moveToElement(locateElement(Element)).build().perform();	
 			b=true;
 		    wait(2000);
@@ -81,7 +83,7 @@ public class Architypes {
 	//Click on an Element specified by Xpath
 		public boolean ClickElementByXpath(String XP){
 			Boolean b = false;
-			try{Initialize.driver.findElement(By.xpath(XP)).click();	
+			try{init.driver.findElement(By.xpath(XP)).click();	
 				b=true;
 			    //wait(5000);
 			    reporter.Pass("Click on required Element using Xpath is successful", true);
@@ -97,7 +99,7 @@ public class Architypes {
 	//Press Key or type from Keyboard specified by Key Name
 		public boolean pressKey(String key){
 			Boolean b = false;
-			Actions action = new Actions(Initialize.driver);
+			Actions action = new Actions(init.driver);
 			switch (key) {
 			case "ARROW_LEFT":	try{action.sendKeys(Keys.ARROW_LEFT).build().perform();
 									b=true;
@@ -186,7 +188,7 @@ public class Architypes {
 	public boolean ClickText(String Text){
 		Boolean b = false;
 		String xPath = "//*[text()='" + Text + "']";
-		try{Initialize.driver.findElement(By.xpath(xPath)).click();;	
+		try{init.driver.findElement(By.xpath(xPath)).click();;	
 			b=true;
 		    wait(5000);
 		    reporter.Pass("Click on Element by Element Text: " + Text + " is successful", true);
@@ -529,8 +531,8 @@ public class Architypes {
 	//Retrieve text from Element specified by Xpath
 		public String getTextByXpath(String Xpath){
 			String text="";
-			if(Initialize.driver.findElements(By.xpath(Xpath)).size()>0){
-				text = Initialize.driver.findElements(By.xpath(Xpath)).get(0).getText().trim();
+			if(init.driver.findElements(By.xpath(Xpath)).size()>0){
+				text = init.driver.findElements(By.xpath(Xpath)).get(0).getText().trim();
 				System.out.println("Text present in Element specified by Xpath is " + text);
 			}
 		return text;
@@ -539,8 +541,8 @@ public class Architypes {
 	//Retrieve attribute value from Element specified by Xpath
 		public String getAttributeValueByXpath(String Xpath, String Attr){
 			String value="";
-			if(Initialize.driver.findElements(By.xpath(Xpath)).size()>0){
-				value = Initialize.driver.findElements(By.xpath(Xpath)).get(0).getAttribute(Attr);
+			if(init.driver.findElements(By.xpath(Xpath)).size()>0){
+				value = init.driver.findElements(By.xpath(Xpath)).get(0).getAttribute(Attr);
 				System.out.println("Text present in Element specified by Xpath is " + value);
 			}
 		return value;
@@ -551,9 +553,9 @@ public class Architypes {
 		public boolean verifyDisabledByXpath(String Xpath){
 			String value="",date="";
 			boolean b = true;
-			if(Initialize.driver.findElements(By.xpath(Xpath)).size()>0){
-				date = Initialize.driver.findElements(By.xpath(Xpath)).get(0).getText();
-				value = Initialize.driver.findElements(By.xpath(Xpath)).get(0).getAttribute("class");
+			if(init.driver.findElements(By.xpath(Xpath)).size()>0){
+				date = init.driver.findElements(By.xpath(Xpath)).get(0).getText();
+				value = init.driver.findElements(By.xpath(Xpath)).get(0).getAttribute("class");
 				if(value.contains("disabled")){
 					System.out.println("Date -> " + date + " is disabled as expected");
 				}else{
@@ -571,8 +573,8 @@ public class Architypes {
 	//Returns WebElement specified by Element Name on Object Repository
 	public WebElement locateElement(String ElementName){
 		WebElement we = null;
-		WebDriver d = Initialize.driver;
-		String Element = PropFileRead.GetKeyValue(ElementName,"ObjRepo.prop");
+		WebDriver d = init.driver;
+		String Element = PropFileRead.GetKeyValue(ElementName,"ObjRepo.prop",init);
 		String Locator = Element.substring(1);
 		char firstChar = Element.charAt(0);
 		switch (firstChar) {
@@ -613,8 +615,8 @@ public class Architypes {
 	//Returns List of WebElements specified by Element Group on Object Repository
 	public List<WebElement> locateElements(String ElementGroup){
 		List<WebElement> Group = null;
-		WebDriver d = Initialize.driver;
-		String Element = PropFileRead.GetKeyValue(ElementGroup,"ObjRepo.prop");
+		WebDriver d = init.driver;
+		String Element = PropFileRead.GetKeyValue(ElementGroup,"ObjRepo.prop",init);
 		char firstChar = Element.charAt(0);
 		String Locator = Element.substring(1);
 		switch (firstChar) {
@@ -660,7 +662,7 @@ public class Architypes {
 		if(TestData.indexOf(" ")!=-1)
 			Data = TestData.trim();
 		else
-			Data = PropFileRead.GetKeyValue(TestData,"TestData.prop");
+			Data = PropFileRead.GetKeyValue(TestData,"TestData.prop",init);
 		
 		return Data;
 	}

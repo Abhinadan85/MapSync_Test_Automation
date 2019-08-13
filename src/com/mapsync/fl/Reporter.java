@@ -19,19 +19,21 @@ public class Reporter {
 	boolean bool_LogDetailed;
 	private static ExtentReports extent;
 	private ExtentTest test;
+	Initialize init;
 	
 	//Singleton class
 	private static Reporter reporter;
     private String fileName;
-    public static Reporter getInstance(){
+    public static Reporter getInstance(Initialize initInstance){
         if(reporter == null){
-        	reporter = new Reporter();
+        	reporter = new Reporter(initInstance);
         }
         return reporter;
     }	
     
     //Constructor for Singleton class has to be private
-    private Reporter(){
+    private Reporter(Initialize initInstance){
+    	init = initInstance;
 		if (extent == null) {			
 			Date d=new Date();
 			
@@ -50,7 +52,7 @@ public class Reporter {
 			}
 			
 		}		
-		if (PropFileRead.GetKeyValue("LOGTYPE","Config.prop").equalsIgnoreCase("DETAILED"))
+		if (PropFileRead.GetKeyValue("LOGTYPE","Config.prop",init).equalsIgnoreCase("DETAILED"))
 			bool_LogDetailed = true;
 		else
 			bool_LogDetailed = false;		
@@ -64,7 +66,7 @@ public class Reporter {
     //Need to check this method
 	public void endTest(String testName){
 		reporter.Pass("Terminating Test -> " + testName + " on " + Logon.Device, false);
-		Initialize.driver.quit();
+		init.driver.close();
 		extent.endTest(test);
 		extent.flush();			
 	}
@@ -76,7 +78,7 @@ public class Reporter {
 			String screenshotFile=dt.toString().replace(":", "_").replace(" ", "_")+".png";
 			screenshotFile = System.getProperty("user.dir")+ "//Reports//Screenshots//" + fileName + "//" + screenshotFile;
 			// store screenshot in that file
-			File scrFile = ((TakesScreenshot)Initialize.driver).getScreenshotAs(OutputType.FILE);
+			File scrFile = ((TakesScreenshot)init.driver).getScreenshotAs(OutputType.FILE);
 			try {
 				FileUtils.copyFile(scrFile, new File(screenshotFile));
 			} catch (IOException e) {
@@ -96,7 +98,7 @@ public class Reporter {
 			String screenshotFile=dt.toString().replace(":", "_").replace(" ", "_")+".png";
 			screenshotFile = System.getProperty("user.dir")+ "//Reports//Screenshots//" + fileName + "//" + screenshotFile;
 			// store screenshot in that file
-			File scrFile = ((TakesScreenshot)Initialize.driver).getScreenshotAs(OutputType.FILE);
+			File scrFile = ((TakesScreenshot)init.driver).getScreenshotAs(OutputType.FILE);
 			try {
 				FileUtils.copyFile(scrFile, new File(screenshotFile));
 			} catch (IOException e) {
@@ -117,7 +119,7 @@ public class Reporter {
 			String screenshotFile=dt.toString().replace(":", "_").replace(" ", "_")+".png";
 			screenshotFile = System.getProperty("user.dir")+ "//Reports//Screenshots//" + fileName + "//" + screenshotFile;
 			// store screenshot in that file
-			File scrFile = ((TakesScreenshot)Initialize.driver).getScreenshotAs(OutputType.FILE);
+			File scrFile = ((TakesScreenshot)init.driver).getScreenshotAs(OutputType.FILE);
 			try {
 				FileUtils.copyFile(scrFile, new File(screenshotFile));
 			} catch (IOException e) {
@@ -144,7 +146,7 @@ public class Reporter {
 				String screenshotFile=dt.toString().replace(":", "_").replace(" ", "_")+".png";
 				screenshotFile = System.getProperty("user.dir")+ "/..//Reports//Screenshots//" + fileName + "//" + screenshotFile;
 				// store screenshot in that file
-				File scrFile = ((TakesScreenshot)Initialize.driver).getScreenshotAs(OutputType.FILE);
+				File scrFile = ((TakesScreenshot)init.driver).getScreenshotAs(OutputType.FILE);
 				try {
 					FileUtils.copyFile(scrFile, new File(screenshotFile));
 				} catch (IOException e) {

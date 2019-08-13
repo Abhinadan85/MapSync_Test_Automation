@@ -17,23 +17,26 @@ public class Galactico {
 	Reporter reporter;
 	String TestName;
 	Architypes A;
+	Initialize init;
 	
-	public Galactico(String tName){
-		reporter = Reporter.getInstance();
+	public Galactico(String tName , Initialize initInstance){
+		reporter = Reporter.getInstance(initInstance);
 		TestName = tName;
-		A = new Architypes(TestName);
+		A = new Architypes(TestName, initInstance);
+		init = initInstance;
+		
 	}
 	
 	
 
 	public void openGalactico(){
-//System.setProperty("webdriver.chrome.driver","C:\\Users\\AM040674\\OneDrive - Cerner Corporation\\Desktop\\Webdriver\\Chrome\\chromedriver_win32\\chromedriver.exe");
+
 		
 	//	WebDriver driver = new ChromeDriver();
 		A.ClickElement("GALACTICO");
 		
-		   ArrayList<String> tabs2 = new ArrayList<String> (Initialize.driver.getWindowHandles());
-		   Initialize.driver.switchTo().window(tabs2.get(1));
+		   ArrayList<String> tabs2 = new ArrayList<String> (init.driver.getWindowHandles());
+		   init.driver.switchTo().window(tabs2.get(1));
 		   
 		   wait(5000);
 		   

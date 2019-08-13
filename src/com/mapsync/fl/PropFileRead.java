@@ -4,9 +4,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+import com.mapsync.fl.Initialize;
 
 public class PropFileRead {
-	public static String GetKeyValue(String Key, String Path){
+	public static String GetKeyValue(String Key, String Path,Initialize initInstance){
 		Properties Prop = new Properties();
 		FileInputStream FIS = null;
 		Path = "./Dependencies/" + Path;
@@ -14,13 +15,13 @@ public class PropFileRead {
 			FIS = new FileInputStream(Path);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-			Reporter.getInstance().FailAndExit(Path,"Unable to read property file." + e.getMessage(), false);
+			Reporter.getInstance(initInstance).FailAndExit(Path,"Unable to read property file." + e.getMessage(), false);
 		}
 		try {
 			Prop.load(FIS);
 		} catch (IOException e) {
 			e.printStackTrace();
-			Reporter.getInstance().FailAndExit(Path,"Unable to read property file." + e.getMessage(), false);
+			Reporter.getInstance(initInstance).FailAndExit(Path,"Unable to read property file." + e.getMessage(), false);
 		}
 		
 		String Value = Prop.getProperty(Key);

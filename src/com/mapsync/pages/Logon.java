@@ -14,14 +14,15 @@ public class Logon {
 	public static String Browser;
 	Architypes A;
 	
-	public Logon(String tName){		
-		Init = new Initialize();
-		reporter = Reporter.getInstance();
-		Device = PropFileRead.GetKeyValue("DEVICE","Config.prop");
-		Browser = PropFileRead.GetKeyValue("BROWSER","Config.prop");
+	public Logon(String tName, Initialize initInstance){		
+		
+		Init = initInstance;
+		reporter = Reporter.getInstance(initInstance);
+		Device = PropFileRead.GetKeyValue("DEVICE","Config.prop",Init);
+		Browser = PropFileRead.GetKeyValue("BROWSER","Config.prop",Init);
 		TestName = tName;
 		reporter.BeginTest(tName);
-		A = new Architypes(TestName);
+		A = new Architypes(TestName,Init);
 	}
 	
 	/**
@@ -32,9 +33,9 @@ public class Logon {
 	public Boolean Login(){
 		Boolean b=false;
 		
-		//Reading Properties File for URL, Device Name, Username and Password
+		//Reading Properties File for URL, Device Name
 		reporter.Log("Reading CONFIG.PROP Properties File...", false);
-		String URL = PropFileRead.GetKeyValue("URL","Config.prop");
+		String URL = PropFileRead.GetKeyValue("URL","Config.prop",Init);
 		reporter.Log("Reading CONFIG.PROP Properties File is successful", false);
 
 		Init.InitiateExecution(URL);

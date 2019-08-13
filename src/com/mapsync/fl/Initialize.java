@@ -26,7 +26,7 @@ import io.appium.java_client.android.AndroidElement;
 */
 
 public class Initialize {
-	public static WebDriver driver;
+	public WebDriver driver;
 //	public WebDriver driver;
 	public static int TestRun = 1;
 	String TASKLIST = "tasklist";
@@ -44,16 +44,16 @@ public class Initialize {
 			String OS = System.getProperty("os.name").toLowerCase();
 			System.out.println("Operating System of the execution device -> " + OS);
 			if(OS.indexOf("linux") >= 0) {
-				if(PropFileRead.GetKeyValue("BROWSER","Config.prop").equalsIgnoreCase("Chrome")){
+				if(PropFileRead.GetKeyValue("BROWSER","Config.prop",this).equalsIgnoreCase("Chrome")){
 					System.setProperty("webdriver.chrome.driver", "./Dependencies/chromedriver");
-				} else if (PropFileRead.GetKeyValue("BROWSER","Config.prop").equalsIgnoreCase("IE")){
+				} else if (PropFileRead.GetKeyValue("BROWSER","Config.prop",this).equalsIgnoreCase("IE")){
 					System.setProperty("webdriver.ie.driver", "./Dependencies/IEDriverServer");
 				}
 			}
 			else {
-				if(PropFileRead.GetKeyValue("BROWSER","Config.prop").equalsIgnoreCase("Chrome")){
+				if(PropFileRead.GetKeyValue("BROWSER","Config.prop",this).equalsIgnoreCase("Chrome")){
 				System.setProperty("webdriver.chrome.driver", "./Dependencies/chromedriver.exe");
-			} else if (PropFileRead.GetKeyValue("BROWSER","Config.prop").equalsIgnoreCase("IE")){
+			} else if (PropFileRead.GetKeyValue("BROWSER","Config.prop",this).equalsIgnoreCase("IE")){
 				System.setProperty("webdriver.ie.driver", "./Dependencies/IEDriverServer.exe");
 			}
 			}
@@ -76,16 +76,16 @@ public class Initialize {
   	    System.out.println("No of Test Running " + (TestRun-1));
   	    
 		switch (Logon.Device.toUpperCase()) {
-	    case "LAPTOP": if(PropFileRead.GetKeyValue("BROWSER","Config.prop").equalsIgnoreCase("Chrome")){
+	    case "LAPTOP": if(PropFileRead.GetKeyValue("BROWSER","Config.prop",this).equalsIgnoreCase("Chrome")){
 			    		  cap = DesiredCapabilities.chrome();
 				    	  cap.setCapability(ChromeOptions.CAPABILITY, options);
 				    	  driver = new ChromeDriver(cap);
 		    			  driver.manage().window().maximize();
-			    	  }else if(PropFileRead.GetKeyValue("BROWSER","Config.prop").equalsIgnoreCase("IE")){
+			    	  }else if(PropFileRead.GetKeyValue("BROWSER","Config.prop",this).equalsIgnoreCase("IE")){
 			    		  cap = DesiredCapabilities.internetExplorer();
 				    	  driver = new InternetExplorerDriver(cap);
 		    			  driver.manage().window().maximize();
-			    	  }else if(PropFileRead.GetKeyValue("BROWSER","Config.prop").equalsIgnoreCase("HTML")){
+			    	  }else if(PropFileRead.GetKeyValue("BROWSER","Config.prop",this).equalsIgnoreCase("HTML")){
 			    	  
 			    		  driver = new HtmlUnitDriver();
 			    	  }

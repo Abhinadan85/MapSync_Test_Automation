@@ -3,6 +3,7 @@ package com.mapsync.pages;
 
 import com.mapsync.fl.Architypes;
 import com.mapsync.fl.Reporter;
+import com.mapsync.fl.Initialize;
 
 
 
@@ -11,17 +12,19 @@ public class Camera {
 	Reporter reporter;
 	String TestName;
 	Architypes A;
+	Initialize init;
 	
-	public Camera(String tName){
-		reporter = Reporter.getInstance();
+	public Camera(String tName, Initialize initInstance){
+		init = initInstance;
+		reporter = Reporter.getInstance(init);
 		TestName = tName;
-		A = new Architypes(TestName);
+		A = new Architypes(TestName,init);
 	}
 	
 	
 
 	public void openCamera(){
-//System.setProperty("webdriver.chrome.driver","C:\\Users\\AM040674\\OneDrive - Cerner Corporation\\Desktop\\Webdriver\\Chrome\\chromedriver_win32\\chromedriver.exe");
+
 		
 	//	WebDriver driver = new ChromeDriver();
 		A.ClickElement("CAMERA");
