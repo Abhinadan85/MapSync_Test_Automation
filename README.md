@@ -1,6 +1,8 @@
 # MapSync_Test_Automation
 Repository contains automation tests for MapSync Application
-1) Goto GitHub and clone the repository from the following location :    https://github.com/Abhinadan85/MapSync_Test_Automation.git
+1) Goto GitHub and clone the repository from the following location(import the project clone in Eclipse. Preferable version version : Mars.2 Release 4.5.2) :    https://github.com/Abhinadan85/MapSync_Test_Automation.git
+Configure Build Path to add all external jars available in JAR_New
+Please ensure that you have Chrome version 76 or higher installed in your machine.
 2) This framework consists of 1 test suite, which conssts of 4 tests :
    i) MapsynqRegistration - Opens www.mapsync.com -> Clicks on Register -> Registers a new user -> Closes the                                       browser
   ii) OpenCamera - Opens www.mapsync.com -> Clicks on Camera tab in the left hand side bar -> Selects                                                                     location -> Closes the       browser.                                            
